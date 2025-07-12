@@ -1,0 +1,47 @@
+.chat-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chat-input-form {
+  position: relative;
+  width: 300px;
+  padding: 10px;
+  background: #F8F9FF;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.message-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.send-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: #5B5CFF;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(91,92,255,0.3);
+}
+
+.send-button span {
+  font-size: 14px;
+}

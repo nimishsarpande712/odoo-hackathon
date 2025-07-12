@@ -1,0 +1,154 @@
+.star-rating {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.star-rating.small .star {
+  font-size: 14px;
+}
+
+.star-rating.medium .star {
+  font-size: 18px;
+}
+
+.star-rating.large .star {
+  font-size: 24px;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.star:hover {
+  color: #ffed4e;
+}
+
+.star-rating.readonly .star {
+  cursor: default;
+}
+
+.rating-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.rating-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.rating-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.rating-modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  padding: 0.5rem;
+}
+
+.rating-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rating-section, .comment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rating-section label, .comment-section label {
+  font-weight: 600;
+  color: #333;
+}
+
+.comment-section textarea {
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.comment-section textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.rating-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancel-btn, .submit-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cancel-btn {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.cancel-btn:hover {
+  background: #e9ecef;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

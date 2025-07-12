@@ -1,0 +1,195 @@
+.Card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.Card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.user-name {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.user-location {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.card-content {
+  margin-bottom: 1.5rem;
+}
+
+.skills-section {
+  margin-bottom: 1.5rem;
+}
+
+.skills-section h4 {
+  color: #34495e;
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.skill-tag.offered {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.skill-tag.wanted {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.skill-tag.beginner {
+  opacity: 0.8;
+}
+
+.skill-tag.intermediate {
+  opacity: 0.9;
+}
+
+.skill-tag.advanced {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.skill-tag.expert {
+  opacity: 1;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.availability-section h4 {
+  color: #34495e;
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.availability-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.availability-slot {
+  padding: 0.3rem 0.6rem;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.contact-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.contact-section h4 {
+  color: #34495e;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.email {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0;
+  word-break: break-word;
+}
+
+.card-footer {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.contact-btn:active {
+  transform: translateY(0);
+}
+
+/* Current User Card Styling */
+.current-user-card {
+  border: 2px solid #28a745;
+  background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+  position: relative;
+}
+
+.current-user-indicator {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.current-user-footer {
+  text-align: center;
+  color: #28a745;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.current-user-footer p {
+  margin: 0;
+}

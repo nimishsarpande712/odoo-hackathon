@@ -1,0 +1,130 @@
+/* Global responsive styles */
+:root {
+  --container-width: 95%;
+  --max-width: 1200px;
+}
+
+/* Base responsive container */
+.container {
+  width: var(--container-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive Grid System */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Responsive Typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Responsive Components */
+.card {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Rating Component */
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.star.active {
+  color: #ffd700;
+}
+
+.rating-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .rating-container {
+    padding: 0.75rem;
+  }
+  
+  .form-control {
+    padding: 0.5rem;
+  }
+}
+
+/* Responsive Tables */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+}
+
+/* Responsive Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

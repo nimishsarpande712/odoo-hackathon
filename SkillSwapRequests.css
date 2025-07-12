@@ -1,0 +1,299 @@
+.requests-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.requests-popup::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.requests-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.requests-tabs {
+  display: flex;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.tab-btn.active {
+  color: #667eea;
+  background-color: white;
+  border-bottom-color: #667eea;
+}
+
+.requests-content {
+  overflow-y: auto;
+  max-height: calc(80vh - 140px);
+}
+
+.loading, .no-requests {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-item {
+  padding: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.request-item:hover {
+  background-color: #f8f9fa;
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.user-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-accepted {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-declined {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-cancelled {
+  background-color: #e2e3e5;
+  color: #383d41;
+  border: 1px solid #d6d8db;
+}
+
+.request-message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.request-message p {
+  margin: 0;
+  font-style: italic;
+  color: #495057;
+  line-height: 1.5;
+}
+
+.request-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.request-date {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.accept-btn, .decline-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.accept-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.decline-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.decline-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.chat-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.chat-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .requests-popup {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .requests-header {
+    padding: 1rem;
+  }
+  
+  .tab-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .request-item {
+    padding: 1rem;
+  }
+  
+  .request-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .request-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .request-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .accept-btn, .decline-btn {
+    flex: 1;
+    max-width: 100px;
+  }
+}
